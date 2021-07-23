@@ -1,0 +1,1743 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+
+    /* background-color:  ; */
+    --upperHead-background: #FFBF37;
+    --background-color-one: #f3faff;
+    --background-color-section: #f4f4f4;
+
+    /* button background-color  */
+
+    --button-background-blackGrey: #464646;
+    --button-background-yellow: #ffc038;
+    
+
+    /* font color  */
+    --font-color: #464646;
+    --font-color-two: #252525;
+    --font-color-three: #636363;
+    --font-color-four: #8d8d8d;
+    --font-color-five: #6a6a6a;
+    --font-color-six: #f5f5f5;
+    --font-color-seven: #3a3a3a;
+    --link-color: #aab2bd;
+    --font-color-coral: #f26c4f;
+    --font-color-black: #363636;
+    --font-color-white: #FDFCFC; 
+    --white: #ffff;
+    
+
+  /* hover color  */
+  --hover-color: #fbc73a;
+    /* icon color  */
+    --icon-color: #0c90ff;
+    --envelope-icon:#030104;
+
+    /* border color  */
+    --border-color: #ffed50;
+    --verticle-line: #d8d8de;
+    --input-border:#373737;
+    /* font family  */
+    --font-style-roboto: 'Roboto', sans-serif;
+    --font-style-sourceSans: 'Source Sans Pro', sans-serif;
+    --font-style-openSans:'Open Sans', sans-serif;
+
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+@media screen and (max-width:1069px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width:941px) {
+    html {
+        font-size: 52%;
+    }
+}
+
+@media screen and (max-width:877px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+@media screen and (max-width:699px) {
+    html {
+        font-size: 46%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    html {
+        font-size: 44%;
+    }
+}
+
+body {
+
+
+    line-height: 1.5;
+    font-size: 0.875rem;
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+
+    line-height: 1.25;
+    /* margin-bottom: 0.75rem; */
+    /* font-family: var(--font-style); */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p{
+
+}
+/* =================================== */
+/* logo and menu section start */
+/* =================================== */
+
+
+.container_wrapper{
+    margin: auto;
+    max-width: 100%;
+    background-color: var(--upperHead-background);
+ 
+}
+
+.container{
+    width: 101rem;
+    margin: 0 auto;
+    padding: 7.4rem 0;
+}
+
+.logoAnd_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+.logo img{
+    width: 19rem;
+}
+.nav{
+    width: 62.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav a{
+      font-size: 1.4rem;
+      font-family: var(--font-style-roboto);
+      color: var(--font-color);
+      font-weight: bold;
+      text-transform: uppercase;
+}
+#navPartTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 2rem;
+}
+#navPartTwo a:nth-child(2){
+    font-size: 1.2rem;
+}
+ /* hamburger menu  */
+ .hamburger {
+     display: none;
+ }
+ .hamburger i{
+    color: var(--white);
+    font-size: 20px;
+    background-color: var(--font-color);
+    cursor: pointer;
+    padding: 10px 11px;
+    border-radius: 100%;
+  
+ }
+
+/* media start for logo and nav  */
+
+@media screen and (max-width:846px){
+    body, html{
+        transition: 1s all;
+    }
+     .container , .heroSection_container{
+        width: 90%;
+    }
+    .hamburger{
+        display: block;
+    }
+    .nav{
+        background-color:var(--upperHead-background);
+        box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+        padding: 15rem 5rem;
+        width: 50%;
+        height: 100vh;
+        margin: 0 auto;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        transition: .4s ease-in ;
+       
+    }
+    .nav.ShowMenu{
+        left: 0;
+        transition: .4s ease-out ;
+    }
+    .nav a{
+        padding: 1.5rem 4rem;
+        transition: .5s ease-in-out;
+     
+    }
+    .nav a:not(#navPartTwo a):hover{
+       
+        background-color: var(--font-color);
+        color: var(--upperHead-background);
+        border-radius: 3px;
+        transition: .5s ease-in-out;
+    }
+    #navPartTwo{
+        align-items: flex-start;
+    }
+
+    
+}
+
+
+/* media ends for logo and nav  */
+
+/* =================================== */
+/* logo and menu section Ends */
+/* =================================== */
+
+/* -------------------------------------------------------------------- */
+
+/* =================================== */
+/* Hero section starts (2nd part) */
+/* =================================== */
+.heroSection_wrapper{
+    margin: auto;
+    max-width: 100%;
+    background-color: var(--upperHead-background);
+}
+.heroSection_container{
+    width: 101rem;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+}
+.hero_heading_and_macBook_image{
+    display: flex;
+    align-items: center;
+}
+
+/* part one  */
+.hero_heading_para_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.hero_heading_para_button h1{
+    font-size: 4.2rem;
+    font-family: var(--font-style-roboto);
+    color: var(--font-color-white);
+    margin-bottom: 2.6rem;
+}
+.hero_heading_para_button p{
+    color: var(--white);
+    font-family: var(--font-style-roboto);
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.7rem;
+    margin-bottom: 3.5rem;
+
+}
+
+.viewMore_button {
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color:var(--button-background-blackGrey) ;
+   padding: 1.3rem 2.5rem;
+   border-radius: 4px;
+   cursor: pointer;
+   
+}
+.viewMore_button a{
+color: var(--white);
+font-family: var(--font-style-roboto);
+font-weight: 400;
+font-size: 1.4rem;
+margin-right: 1rem;
+}
+
+
+/* part two  */
+.mac_and_mobile_image img:not(.arrow_image img){
+   width: 62.2rem;
+    margin-top: 1rem;
+}
+
+.arrow_image img{
+    width: 39.3rem;
+    margin-left: -10rem;
+    margin-top: -3rem;
+}
+/* slider image  */
+
+.slider_image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.slider_icon .far , .fas{
+    justify-content: space-around;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* responsiveness for hero section  start*/
+@media screen and (max-width:846px){
+    body, html{
+        transition: 1s all;
+    }
+    .heroSection_container{
+        width: 90%;
+    }
+    .hero_heading_and_macBook_image{
+        display: flex;
+        flex-direction: column;
+    }
+    .mac_and_mobile_image{
+        margin-top: 5rem;
+    }
+    .arrow_image{
+        display: none;
+    }
+    .hero_heading_para_button p{
+        font-size: 2rem;
+    }
+}
+/* media for 540  */
+@media screen and (max-width:540px){
+    .mac_and_mobile_image img:not(.arrow_image img){
+        width: 40.2rem;
+        margin-top: 1rem;
+    }
+}
+
+/* responsiveness for hero section  ends*/
+
+
+/* =================================== */
+/* Hero section ends (2nd part) */
+/* =================================== */
+
+
+
+/* =================================== */
+/* what we do start (3rd part) */
+/* =================================== */
+
+.what_we_do_wrapper {
+    margin: auto;
+    max-width: 100%;
+    margin-top: 14rem;
+}
+
+.what_we_do_container{
+    width: 101rem;
+    margin: 0 auto;
+ 
+ 
+}
+
+
+.title_and_arrowImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  position: relative;
+  
+  
+}
+.title_and_arrowImage h2{
+    padding: 1.6rem 9.1rem;
+    background-color: var(--button-background-blackGrey);
+    color: var(--white);
+    font-family: var(--font-style-sourceSans);
+    font-size: 2.6rem;  
+    border-radius: 4px;  
+
+    box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.1);
+}
+.title_and_arrowImage img{
+    width: 7.1rem;
+ position: absolute;
+right: 26%;
+top: 50%;
+}
+/* another deign for title and arrow images */
+
+.title_and_arrowImage_two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  position: relative;
+  
+  
+}
+.title_and_arrowImage_two h2{
+    padding: 1.6rem 9.1rem;
+    background-color: var(--button-background-blackGrey);
+    color: var(--white);
+    font-family: var(--font-style-sourceSans);
+    font-size: 2.6rem;  
+    border-radius: 4px;  
+
+    box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.1);
+}
+.title_and_arrowImage_two img{
+    width: 7.1rem;
+ position: absolute;
+left: 26%;
+top: 50%;
+}
+
+.what_we_do_content{
+    margin-top: 18.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+/* part one  */
+.web_design , .SEO {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 21.7rem;
+    width: 99.5rem;
+    justify-content: space-between;
+
+}
+
+.Affi_Marketing{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 13rem;
+    width: 99.5rem;
+    justify-content: space-between;
+
+}
+.web_design img , .SEO img , .Affi_Marketing img{
+  
+width: 42.3rem;
+}
+.webDesing_head_para , .SEO_head_and_Para ,.Affi_Marketing_head_para{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 46.7rem;
+}
+.webDesing_head_para h3 , .SEO_head_and_Para h3  , .Affi_Marketing_head_para h3{
+    font-size:1.8rem;
+    font-family: var(--font-style-roboto);
+    margin-bottom: 1rem;
+    color: var( --font-color-two);
+}
+.webDesing_head_para p , .SEO_head_and_Para p , .Affi_Marketing_head_para p{
+    font-size: 1.4rem;
+    text-align: left;
+    line-height: 2.7rem;
+    font-weight: 300;
+    font-family: var(--font-style-roboto);
+    margin-bottom: 1rem;
+}
+.webDesing_head_para a , .SEO_head_and_Para a , .Affi_Marketing_head_para a{
+    color: var(--font-color);
+    font-family: var(--font-style-openSans);
+    font-weight: 700;
+    box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.1);
+    font-size: 1.25rem;
+    background-color:var(--button-background-yellow) ;
+    padding: 1.6rem 4.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+/* start the responsiveness of what we do  */
+@media screen and (max-width:846px){
+    body, html{
+        transition: 1s all;
+    }
+    .what_we_do_container{
+        width: 90%;
+    }
+    .web_design , .SEO , .Affi_Marketing{
+        display: flex;
+        align-items: center;
+     flex-direction: column;
+     
+    }
+
+    .web_design , .SEO {
+     margin-bottom: 10rem;
+     
+    }
+    .web_design img , .Affi_Marketing img , .SEO_image img{
+        margin-bottom: 5rem;
+    }
+    /* reverse  */
+
+    .SEO_head_and_Para{
+        order: 2;
+    }
+    .SEO_image{
+        order: 1;
+    }
+
+
+    .webDesing_head_para , .SEO_head_and_Para , .Affi_Marketing_head_para {
+        align-items: center;
+    }
+    .webDesing_head_para p , .SEO_head_and_Para p , .Affi_Marketing_head_para p{
+        font-size: 1.8rem;
+     
+    }
+    .webDesing_head_para h3 , .SEO_head_and_Para h3  , .Affi_Marketing_head_para h3{
+        font-size:2rem;
+    }
+    .title_and_arrowImage img ,  .title_and_arrowImage_two img{
+        display: none;
+    }
+}
+
+@media screen and (max-width:350px){
+    .webDesing_head_para p , .SEO_head_and_Para p , .Affi_Marketing_head_para p{
+   width: 80%;
+     
+    }
+
+    .web_design img , .Affi_Marketing img , .SEO_image img{
+    width: 30rem;
+    }
+
+    .title_and_arrowImage h2{
+        padding: 1.6rem 5rem;
+      
+    }
+}
+/* end the responsiveness of what we do  */
+
+
+/* =================================== */
+/* what we do ends (3rd part) */
+/* =================================== */
+
+
+
+
+/* =================================== */
+/* what we do start(4thrd part) */
+/* =================================== */
+.how_we_works_wrapper{
+    margin: auto;
+    max-width: 100%;
+    background: url('.//images/HowWeWorksBakckground.png');
+     padding: 8.5rem 0;
+}
+.how_we_works_container{
+    width: 101rem;
+    margin: 0 auto;
+
+  
+}
+.how_we_works_full_img{
+    margin-top: 13.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.how_we_works_full_img img{
+  width: 98.8rem;
+}
+/* what we do start responsive start */
+@media screen and (max-width:846px){
+    body, html{
+        transition: 1s all;
+    }
+    .how_we_works_container{
+        width: 90%;
+    }
+    .how_we_works_full_img img{
+        width: 78.8rem;
+      }
+}
+@media screen and (max-width:620px){
+
+    .how_we_works_full_img img{
+        width: 90%;
+      }
+}
+/* what we do start responsive ends */
+
+/* =================================== */
+/* what we do ends(4th part) */
+/* =================================== */
+
+
+
+/* =================================== */
+/* Features Work Start(5th part) */
+/* =================================== */
+
+.features_wrapper{
+    margin: auto;
+    max-width: 100%;
+    margin-top: 13.2rem;
+}
+
+.features_container{
+    width: 101rem;
+    margin: 0 auto;
+
+}
+
+.features_content_all{
+    margin-top: 14.5rem;
+  
+}
+
+
+.features_content_all h3{
+    font-size: 1.8rem;
+    font-family: var(--font-style-roboto);
+    font-weight: 500;
+    margin-left: 1.5rem;
+}
+
+.features_content_all p{
+    font-size: 1.4rem;
+    font-family: var(--font-style-roboto);
+    font-weight: 300;
+    width: 26.8rem;
+    line-height: 2.7rem;
+}
+.row_One , .row_two , .row_three, .row_four{
+    display: flex;
+    /* width: 100rem; */
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.row_One , .row_two , .row_three{
+    margin-bottom: 9rem;
+}
+.icon_and_heading {
+    display: flex;
+  align-items: center;
+
+}
+.icon_and_heading .far , .icon_and_heading .fas{
+    font-size: 3em;
+    margin-left: -4rem;
+}
+.icon_and_heading img{
+margin-left: -4rem;
+}
+/* .row_one_part_one{
+ background-color: red;
+} */
+
+.rowPart{
+        padding-left: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 32rem;
+    transition: .7s ease-in-out;
+    cursor: pointer;
+}
+.activeContent , .rowPart:hover{
+    background-color: var( --hover-color);
+    transition: .7s ease-in-out;
+   
+}
+.activeContent .far , .rowPart:hover .far , .rowPart:hover .fas{
+ color: var(--font-color-white);
+ transition: .7s;
+    }
+
+
+    /* responsive starts for features works */
+    @media screen and (max-width:846px){
+        body, html{
+            transition: 1s all;
+        }
+        .features_container{
+            width: 90%;
+            
+        }
+        .row_One , .row_two , .row_three, .row_four{
+            flex-direction: column;
+        }
+        .row_One , .row_two , .row_three{
+            margin-bottom:0;
+        }
+        .rowPart{
+            margin-bottom: 3rem;
+        padding: 5rem;
+            width: 70%;
+            transition: .7s ease-in-out;
+            cursor: pointer;
+        }
+        .features_content_all h3{
+            font-size: 2rem;
+          
+        
+        }
+        .features_content_all p{
+            font-size: 1.8rem;
+            width: 100%;
+            text-align: justify;
+       
+        }
+        .icon_and_heading {
+            display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2rem;
+        
+        }
+    
+        
+    }
+
+    @media screen and (max-width:605px){
+        .rowPart{
+     
+            width: 80%;
+         
+        }
+    }
+    
+    /* responsive ends for features works */
+/* =================================== */
+/* Features Work Ends(5th part) */
+/* =================================== */
+
+
+
+
+/* =================================== */
+/* Starts of Our Packages (7th part) */
+/* =================================== */
+
+
+.our_packages_wrapper{
+    margin: auto;
+    max-width: 100%;
+    margin-top: 16rem;
+}
+
+.our_packages_container{
+    width: 101rem;
+    margin: 0 auto;
+}
+
+
+.mainPrice{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 17.5rem;
+    width: 84rem;
+
+}
+.pricing_table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleOfPack{
+    margin-bottom: 6.5rem;
+}
+
+.priceTitle_one h3{
+    font-size: 2.2rem;
+    font-family: var(--font-style-roboto);
+    font-weight: 400;
+    color: var(--font-color-four);
+}
+.priceTitle_two h3{
+    font-size: 2.7rem;
+    font-family: var(--font-style-roboto);
+    font-weight: 400;
+    color:var(--font-color-coral) ;
+ 
+}
+.priceTitle_three h3{
+    font-size: 2.2rem;
+    font-family: var(--font-style-roboto);
+    font-weight: 400;
+    color: var(--font-color-four);
+}
+
+.list_Of_Description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5.3rem;
+}
+.list_Of_Description h4{
+padding-bottom: 2.7rem;
+}
+
+
+.list_Of_Description h4{
+    font-size: 1.583rem;
+font-family: var(--font-style-roboto);
+font-weight: 500;
+color: var(--font-color-four);
+text-align: center;
+}
+.second_list{
+    margin-top: 1.5rem;
+}
+.second_list h4 {
+    font-size: 1.89rem;
+    font-family: var(--font-style-roboto);
+    font-weight: 500;
+    color: var(--font-color-black);
+    text-align: center;
+  
+ 
+}
+
+.service_price{
+    margin-bottom: 4.3rem;
+}
+.service_price h3{
+    font-size:3.487rem;
+    font-family: var(--font-style-roboto);
+    font-weight: 500;
+    color: var(--font-color-four);
+}
+.service_price span{
+    font-size: 2.5rem;
+    font-family: var(--font-style-roboto);
+    font-weight: 500;
+    color: var(--font-color-four);
+}
+
+.second_price h3{
+    font-size:6.782rem;
+    font-family: var(--font-style-roboto);
+    font-weight: 500;
+    color:var(--font-color-coral) ;
+}
+.second_price span{
+
+    font-family: var(--font-style-roboto);
+    font-weight: 500;
+    color:var(--font-color-coral) ;
+}
+
+.thirdPrice h3{
+
+    color: var(--button-background-yellow);
+}
+.thirdPrice span{ 
+       color: var(--button-background-yellow);
+}
+.basic_button a{
+    font-size: 1.5rem;
+    color:var(--white);
+    padding: 1.25rem 5.5rem;
+    background-color: var(--font-color-four);
+    font-family: var(--font-style-roboto);
+    border-radius: 3px;
+    font-weight: 500;
+}
+.second_button a{
+    font-size: 1.7rem;
+    color:var(--white);
+    padding: 1.7rem 5.9rem;
+    background-color: var(--font-color-coral);
+    font-family: var(--font-style-roboto);
+    border-radius: 3px;
+    font-weight: 400;
+}
+.last_button a{
+    font-size: 1.5rem;
+    color:var(--white);
+    padding: 1.25rem 5.5rem;
+    background-color: var(--button-background-yellow);
+    font-family: var(--font-style-roboto);
+    border-radius: 3px;
+    font-weight: 500;
+}
+.table_one{
+    position: relative;
+}
+.table_one::after{
+    content: ' ';
+    height: 35rem;
+    width: .1rem;
+    background-color: var(--button-background-yellow);
+    position: absolute;
+    left: 23rem;
+    top: 1.8rem;
+}
+.table_three{
+    position: relative;
+}
+.table_three::after{
+    content: ' ';
+    height: 35rem;
+    width: .1rem;
+    background-color: var(--button-background-yellow);
+    position: absolute;
+    left:-3rem;
+    top: 1.8rem;
+}
+.lineOne{
+     position: relative;
+}
+.lineOne::after{
+    content: ' ';
+    height: .1rem;
+    width: 83rem;
+    background-color: var(--button-background-yellow);
+    position: absolute;
+    left:-5rem;
+    top: 3.1rem;
+}
+.line_two{
+     position: relative;
+}
+.line_two::after{
+    content: ' ';
+    height: .1rem;
+    width: 83rem;
+    background-color: var(--button-background-yellow);
+    position: absolute;
+    left: -31.1rem;
+    top: 8.3rem;
+}
+.list_three{
+     position: relative;
+}
+.list_three::after{
+    content: ' ';
+    height: .1rem;
+    width: 83rem;
+    background-color: var(--button-background-yellow);
+    position: absolute;
+    left: -60.9rem;
+    top: 12.5rem;
+}
+.list_four{
+     position: relative;
+}
+.list_four::after{
+    content: ' ';
+    height: .1rem;
+    width: 83rem;
+    background-color: var(--button-background-yellow);
+    position: absolute;
+    left: -67.9rem;
+    top: -14.5rem;
+}
+/* responsvieness of priceing starts   */
+
+@media screen and (max-width:846px){
+    body, html{
+        transition: 1s all;
+    }
+    .our_packages_container{
+        width: 90%;
+    }
+    .mainPrice{
+        flex-direction: column;
+        width: 90%;
+    }
+    .pricing_table{
+        margin-bottom: 5rem;
+    }
+    .table_one::after , .table_three::after , .lineOne::after , .line_two::after , .list_three::after ,.list_four{
+        display: none;
+    }
+
+    .table_one, .table_two , .table_three{
+        width: 90%;
+border-radius: 5px;
+        padding: 5rem 10rem;
+        background-color: rgb(247, 247, 247);
+    }
+    .first_border , .second_border, .third_border{
+        position: relative;
+ border-bottom: 1px solid  var(--button-background-yellow);
+ width: 45rem;
+ padding-bottom: 0;
+ margin-bottom: 1rem;
+    }
+
+}
+
+@media screen and (max-width:484px){
+    .first_border , .second_border, .third_border{
+        position: relative;
+ border-bottom: 1px solid  var(--button-background-yellow);
+ width:100%;
+ padding-bottom: 0;
+ margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width:416px){
+    .basic_button a{
+        font-size: 1.5rem;
+        color:var(--white);
+        padding: 1.25rem 1.8rem;
+        background-color: var(--font-color-four);
+        font-family: var(--font-style-roboto);
+        border-radius: 3px;
+        font-weight: 500;
+    }
+    .second_button a{
+        font-size: 1.5rem;
+        color:var(--white);
+        padding: 1.7rem 1.9rem;
+        background-color: var(--font-color-coral);
+        font-family: var(--font-style-roboto);
+        border-radius: 3px;
+        font-weight: 400;
+    }
+    .last_button a{
+        font-size: 1.5rem;
+        color:var(--white);
+        padding: 1.25rem 1.8rem;
+        background-color: var(--button-background-yellow);
+        font-family: var(--font-style-roboto);
+        border-radius: 3px;
+        font-weight: 500;
+    }
+}
+/* responsvieness of priceing ends  */
+/* =================================== */
+/* Ends of Our Packages (7th part) */
+/* =================================== */
+
+
+/* =================================== */
+/* <!-- start of Our history (7th part) -->
+/* =================================== */
+
+.our_history_wrapper{
+    margin:16.5rem auto 0 auto;
+    max-width: 100%;
+    background: url('../images/HowWeWorksBakckground.png');
+}
+.our_history_container{
+    width: 101rem;
+    margin: 0 auto;
+}
+
+.history_parent_div{
+   
+    width: 100%;
+   display: flex;
+   padding: 6.4rem 0;
+   justify-content: space-between;
+}
+
+
+.imagePartOfHistory img{
+    width: 50.5rem;
+    height: 46.6rem;
+}
+.historyHeading_para_browse_button{
+    width: 48.2rem;
+    /* height: 46.6rem; */
+
+    
+}
+
+.history_button h3{
+    font-family: var(--font-style-sourceSans);
+    font-weight: 700;
+    font-size: 2.6rem;
+    padding: 1.6rem 0;
+    background-color: var(--button-background-blackGrey);
+    color: var(--white);
+    width: 22rem;
+    text-align: center;
+    margin-bottom: 2.7rem;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+.history_para p{
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    font-family: var(--font-style-roboto);
+    font-weight: 300;
+    color: var(--font-color);
+    margin-bottom: 4.3rem;
+
+}
+
+.browse_history_button a{
+
+font-size: 1.189rem;
+font-family: var(--font-style-openSans);
+font-weight: bold;
+    background-color: var(--button-background-yellow);
+    padding:1.8rem 3.9rem ;
+    color: var(--font-color-black);height: 5rem;
+width: 19.2rem;
+border-radius: 4px;
+box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* start responsiveness  */
+@media screen and (max-width:846px){
+    .our_history_container{
+        width: 90%;
+    }
+    .imagePartOfHistory{
+        display: none;
+    }
+    .historyHeading_para_browse_button{
+    margin: 0 auto;
+    }
+    .history_button h3 {
+ margin: 0 auto 2.7rem auto;
+ font-size: 2rem;
+    }
+    .history_para p{
+        font-size: 1.8rem;
+        text-align: justify;
+    }
+    .browse_history_button a{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .history_parent_div{
+        text-align: center;
+    }
+}
+
+/* =================================== */
+/* <!--End of Our history (7th part) -->
+/* =================================== */
+
+
+/* =================================== */
+/* <!--Start of OUR BUSINESS RELATED PROJECTS (8th part) -->
+/* =================================== */
+.buiness_products_wrapper{
+    max-width: 100%;
+    margin-top: 14.7rem;
+}
+.business_product_container{
+    width: 101rem;
+    margin: 0 auto;
+}
+
+.businessProduct_image_and_heading{
+    background-color:var(--background-color-section) ;
+
+    padding: 9.1rem 9.6rem 8.5rem 9.6rem;
+}
+
+.businessProduct_part_One , .businessProduct_part_two{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.businessProduct_part_One{
+    margin-bottom: 4rem;
+}
+.product_image_and_sub_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product_image_and_sub_heading img{
+    margin-bottom: 4.4rem;
+    /* width: 100%; */
+}
+.product_image_and_sub_heading h3{
+   font-family: var(--font-style-roboto);
+   font-size: 1.6rem;
+   font-weight: bold;
+   color:var( --font-color-five) ;
+}
+
+
+
+
+
+
+.title_and_arrowImage_part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  position: relative;
+  margin-bottom: 13.4rem;
+ 
+}
+.title_and_arrowImage_part h2{
+    padding: 1.6rem 9.1rem;
+    background-color: var(--button-background-blackGrey);
+    color: var(--white);
+    font-family: var(--font-style-sourceSans);
+    font-size: 2.6rem;  
+    border-radius: 4px;  
+
+    box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.1);
+}
+
+.title_and_arrowImage_part img{
+    width: 7.1rem;
+    position: absolute;
+    right: 14.5%;
+    top: 50%;
+}
+/* responsiveness start  */
+@media screen and (max-width:846px){
+    .business_product_container{
+        width: 90%;
+    }
+    .businessProduct_part_One , .businessProduct_part_two{
+flex-direction: column;
+}
+.product_image_and_sub_heading{
+    margin-bottom: 5rem;
+}
+.title_and_arrowImage_part img{
+ display: none;
+}
+.title_and_arrowImage_part h2{
+   text-align: center;
+   
+}
+.product_image_and_sub_heading h3{
+font-size: 2rem;
+ }
+}
+/* =================================== */
+/* <!--End of OUR BUSINESS RELATED PROJECTS (8th part) -->
+/* =================================== */
+
+
+/* =================================== */
+/* Start OUR team members (9th part)
+/* =================================== */
+
+.our_member_wrapper{
+    max-width: 100%;
+    margin-top: 11.6rem;
+   
+}
+.our_member_container{
+  
+}
+.fullWidth_background_color_div{
+
+    margin-top: 14rem;
+    background-color:var(    --button-background-yellow) ;
+
+}
+.team_member_img_name{
+    width: 82.6rem;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+padding-top: 6.2rem;
+padding-bottom: 2.5rem;
+}
+
+.team_member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team_member img{
+    margin-bottom: 1.7rem;
+}
+.team_member h3{
+ color: var(--font-color-six);
+ font-size: 1.6rem;
+ font-family: var(--font-style-roboto);
+ font-weight: bold;
+ margin-bottom: 1.8rem;
+}
+.team_member p{
+ color: var(--font-color-six);
+ font-size: 1.6rem;
+ font-family: var(--font-style-roboto);
+ font-weight: lighter;
+
+}
+
+
+
+
+.titleImg_andArrow{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: 101rem;
+    margin: 0 auto;
+}
+
+.titleImg_andArrow img{
+    width: 7.1rem;
+    position: absolute;
+    left: 21%;
+    top: 47%;
+   
+}
+.titleImg_andArrow  h2{
+    padding: 1.2rem 10.6rem;
+    background-color: var(--button-background-blackGrey);
+    color: var(--white);
+    font-family: var(--font-style-sourceSans);
+    font-size: 2.6rem;  
+    border-radius: 4px;  
+text-align: center;
+    box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.1);
+
+}
+@media screen and (max-width:846px){
+    .team_member_img_name , .titleImg_andArrow{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .team_member:not(.last_team_member){
+        margin-bottom: 5rem;
+    }
+    .titleImg_andArrow img{
+        display: none;
+    }
+    .team_member h3{
+
+        font-size: 2rem;
+
+       }
+       .team_member p{
+      
+        font-size: 1.8rem;
+  
+       
+       }
+}
+/* =================================== */
+/* End OUR team members (9th part)
+/* =================================== */
+
+
+
+
+/* =================================== */
+/* Start  Upadte and Supports (10th part)
+/* =================================== */
+.update_and_support_wrapper{
+    margin: auto;
+    max-width: 100%;
+    margin-top: 13rem;
+}
+.update_and_support_container{
+    width: 101rem;
+    margin: 0 auto;
+}
+.update_text_button_and_img_parent{
+    margin-top: 15.6rem;
+     width: 99.7rem;   
+      display: flex;
+      justify-content: space-between;
+}
+.support_image img{
+width: 52.3rem;
+}
+
+.update_para_and_button{
+    width: 48.5rem;
+}
+.update_para_and_button p{
+   font-size: 1.6rem;
+   font-family: var(--font-style-roboto);
+   font-weight: 300;
+   line-height: 2.7rem;
+   color: var(--font-color);
+   margin-bottom: 3.1rem;
+}
+.update_para_and_button a{
+    font-size: 1.189rem;
+    font-family: var(--font-style-openSans);
+    font-weight: bold;
+        background-color: var(--button-background-yellow);
+        padding:1.8rem 3.9rem ;
+        color: var(--font-color-black);height: 5rem;
+    width: 19.2rem;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.title_and_arrowImage_for_update{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  position: relative;
+  
+  
+}
+.title_and_arrowImage_for_update h2{
+    padding: 1.2rem 9.1rem;
+    background-color: var(--button-background-blackGrey);
+    color: var(--white);
+    font-family: var(--font-style-sourceSans);
+    font-size: 2.6rem;  
+    border-radius: 4px;  
+    text-align: center;
+    box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.1);
+}
+.title_and_arrowImage_for_update img{
+    width: 7.1rem;
+ position: absolute;
+right: 22%;
+top: 50%;
+}
+
+/* responsive start  */
+@media screen and (max-width:846px){
+    .update_and_support_container{
+width: 90%;
+}
+.update_text_button_and_img_parent{
+    flex-direction: column;
+   align-items: center;
+    width: 100%;
+   
+}
+.update_text_button_and_img_parent{
+    margin-top: 9rem;
+     
+}
+
+.support_image{
+    margin-top: 8rem;
+}
+
+.title_and_arrowImage_for_update img{
+    display: none;
+}
+.update_para_and_button{
+    text-align: center;
+
+}
+.update_para_and_button p{
+    font-size: 1.8rem;
+    text-align: justify;
+    
+}
+.update_para_and_button a{
+    font-size: 1.5rem;
+    text-align: center;
+}
+}
+
+@media screen and (max-width:450px){
+    .support_image img{
+        width: 40.3rem;
+        }
+        .update_para_and_button{
+            width: 90%;
+        }
+}
+
+/* =================================== */
+/* End  Upadte and Supports (10th part)
+/* =================================== */
+
+
+/* =================================== */
+/*  Hire Us Starts (11th part)
+/* =================================== */
+
+.hire_us_wrapper{
+    max-width: 100%;
+    margin: 14.5rem auto 0 auto;
+}
+.hire_us_container{
+    width: 101rem;
+    margin: 0 auto;
+}
+
+.hire_us_and_img_parent{
+    display: flex;
+    flex-direction: column;
+}
+.image_and_hire_us img{
+width: 100%;
+}
+.hire_us_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(  --button-background-yellow) ;
+    padding: 3.6rem 5rem;
+  margin-top: -4rem;
+   
+
+    
+}
+.hire_us_content h3{
+    font-family: var(--font-style-openSans);
+    font-weight: bold;
+    color: var( --background-color-section);
+    font-size: 2.2rem;
+}
+.hireButton a{
+  
+    color: var(--font-color-seven);
+    font-family: var(--font-style-openSans);
+    font-weight: bold;
+    font-size: 2rem;
+ padding: 1.1rem 4rem;
+    background-color: var(--background-color-section);
+    border-radius: 3px;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+/* start responsiveness  */
+
+@media screen and (max-width:846px){
+    .hire_us_container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:519px){
+.hire_us_content{
+    flex-direction: column;
+    text-align: center;
+}
+.hireButton{
+    margin-top: 3rem;
+}
+}
+/* end responsiveness  */
+
+/* =================================== */
+/*  Hire Us ends (11th part)
+/* =================================== */
+
+
+
+/* =================================== */
+/*  Footer top Start(12th part)
+/* =================================== */
+
+.topFooter_wrapper{
+    margin: 13.8rem auto 0 auto;
+    width: 100%;
+}
+.top_footer_container{
+
+    margin: 0 auto;
+    background-color:var(  --font-color-black) ;
+}
+.top_footer_parent{
+    width: 66.2%;
+    padding: 4.2rem  0 0 1rem;
+    margin-left: 15rem;
+align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+margin-bottom: 4.8rem;
+
+
+
+}
+
+.footer_child{
+     /* margin-left: 14.3rem; */
+    /* padding-left: 13rem; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+.footer_child h3{
+    font-size: 1.809rem;
+    color: var(--font-color-six);
+    font-family: var(--font-style-roboto);
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+.footer_child a{
+color: var(--link-color);
+font-family: var(--font-style-roboto);
+font-weight: 300;
+font-size: 1.6rem;
+padding-bottom: 1.5rem;
+
+}
+.social_media_footer{
+    text-align: center;
+}
+.social_media_footer a{
+    margin-left: .5rem;
+}
+
+.copyright_parent{
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+.copyright_parent h4{
+    color: var(--link-color);
+    font-family: var(--font-style-roboto);
+    font-weight: 300;
+    font-size: 1.6rem;
+    text-align: center;
+
+}
+/* responsiveness start  */
+
+@media screen and (max-width:846px){
+    .top_footer_parent{
+        width: 90%;
+        margin: 0 auto 4.8rem auto;
+    }
+    .top_footer_parent{
+   flex-wrap: wrap;
+    
+    
+    }
+    .footer_child{
+width: 50%;
+align-items: center;
+
+   }
+    .footer_child a{
+text-align: left;
+
+   }
+
+   .thirdFooter , .forthFooter{
+    margin-top: 5rem;
+   }
+   .copyright_parent h4{
+
+    font-size: 1.8rem;
+
+}
+.footer_child h3{
+    font-size: 2rem;
+
+}
+.footer_child a{
+    font-size: 1.8rem;
+
+}
+}
+
+
+/* responsiveness ends */
+/* =================================== */
+/*  Footer top Ends(12th part)
+/* =================================== */
+
+
