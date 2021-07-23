@@ -239,8 +239,8 @@ p{
     .hamburger{
         display: block;
     }
-    .nav{
-        background-color:var(--upperHead-background);
+    .nav{     
+        background-color:var(--background-color-section);
         box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
         padding: 15rem 5rem;
         width: 50%;
