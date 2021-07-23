@@ -254,6 +254,7 @@ p{
         justify-content: space-evenly;
         flex-direction: column;
         transition: .4s ease-in ;
+        z-index: 11;
        
     }
     .nav.ShowMenu{
@@ -261,8 +262,9 @@ p{
         transition: .4s ease-out ;
     }
     .nav a{
-        padding: 1.5rem 4rem;
+       padding: 1.5rem 3rem;
         transition: .5s ease-in-out;
+        font-size: 1.8rem;
      
     }
     .nav a:not(#navPartTwo a):hover{
@@ -275,6 +277,9 @@ p{
     #navPartTwo{
         align-items: flex-start;
     }
+       #navPartTwo a:nth-child(2) {
+    font-size: 1.5rem;
+}
 
     
 }
